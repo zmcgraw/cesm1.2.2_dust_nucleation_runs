@@ -1,0 +1,72 @@
+
+===============================================================================
+Averaged CESM1.2.2 output from runs used in McGraw et al dust nucleation paper
+
+===============================================================================
+
+Contains 5-year temporal averages of all single-level output variables from
+CESM1.2.2 simulations with modified ice nucleation and MERRA nudged UV-winds
+
+For larger variables involving multiple vertical levels, contact the authors.
+
+Note: Files contain both standard CESM variables and custom variables. The
+      quality of the custom variables is not guaranteed and their use may not
+      be straightforward - contact the authors for more info.
+
+
+
+
+===============================================================================
+Guide to simulation names
+
+===============================================================================
+
+example title: 'pdstlgm_ddreoff_bnu1.0_ull_wsldmlid...'
+
+Prescribed dust setting ('pdst'):
+pd  = present-day dust scenario
+vld = low dust scenario
+lgm = high dust scenario (last glacial maximum dust scenario)
+
+Dust direct radiative impacts setting ('ddre'):
+on
+off
+
+Cirrus dust nucleation setting:
+bnu = Barahona & Nenes 2009 scheme with Ullrich et al 2017 depositional nucleation
+bnd = B&N2009 scheme with David et al 2019 pore condensation & freezing nucleation
+
+Accomodation coefficient:
+1.0
+0.1
+
+Updraft settings ('ws')
+ld - warm cloud medium updraft
+ll - warm cloud weak updraft
+lh - warm cloud strong updraft
+md - mixed-phase cloud temperature regime medium updraft
+ml - mixed-phase cloud temperature regime weak updraft
+mh - mixed-phase cloud temperature regime strong updraft
+id - cirrus medium updraft
+il - cirrus weak updraft
+ih - cirrus strong updraft
+
+Mixed-phase cloud regime dust nucleation setting:
+ull = Ullrich et al 2017
+dm15 = DeMott et al 2015
+mey = Meyers et al 1992 (not aerosol sensitive)
+
+other settings:
+nodstcirr(b) - cirrus nucleation on dust off
+hghim - high dust refractive index
+lowim - low dust refractive index
+nocldrad - marking has no impact, ignore
+
+modifications shared among runs:
+'idet_aopt_nicoff_wbfw1_n2004uv'
+idet - detrainment modified as in Tan et al 2016
+aopt - dust optical properties modified to those in Albani et al 2014
+nicoff - removed constraints on low/high ice crystal numbers in MG08 microphysics
+wbfw1 - WBF process efficiency weakened to 1% of default strength
+n2004uv - UV winds nudged to MERRA reanalysis from 2004-2008
+
